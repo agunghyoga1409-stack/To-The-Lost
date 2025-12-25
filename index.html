@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List Akademik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <h1>📘 To-Do List Akademik</h1>
+    <p class="subtitle">Kelola tugas kuliah dengan rapi dan tepat waktu</p>
+
+    <div class="card">
+        <div class="form-group">
+            <label>Nama</label>
+            <small>Masukkan nama Anda</small>
+            <input id="nama" placeholder="Contoh: Agung Yoga">
+        </div>
+
+        <div class="form-group">
+            <label>NIM</label>
+            <small>Masukkan Nomor Induk Mahasiswa</small>
+            <input id="nim" placeholder="Contoh: 202210001">
+        </div>
+
+        <div class="form-group">
+            <label>Kelas</label>
+            <small>Masukkan kelas Anda</small>
+            <input id="kelas" placeholder="Contoh: TI-5A">
+        </div>
+
+        <div class="form-group">
+            <label>Mata Kuliah</label>
+            <small>Masukkan nama mata kuliah</small>
+            <input id="matkul" placeholder="Contoh: Citra Digital">
+        </div>
+
+        <div class="form-group">
+            <label>Tugas Pertemuan</label>
+            <small>Masukkan pertemuan atau topik tugas</small>
+            <input id="tugas" placeholder="Contoh: Pertemuan 10">
+        </div>
+
+        <div class="form-group">
+            <label>Deadline Tugas</label>
+            <small>Pilih hari dan tanggal pengerjaan terakhir</small>
+            <input id="deadline" type="datetime-local">
+        </div>
+
+        <button id="submitBtn" onclick="addOrUpdateTask()">➕ Tambah Tugas</button>
+    </div>
+
+    <div class="section">
+        <h2>📌 Belum Selesai</h2>
+        <div id="todoList"></div>
+    </div>
+
+    <div class="section">
+        <h2>✅ Sudah Selesai</h2>
+        <div id="doneList"></div>
+    </div>
+</div>
+
+<!-- Notifikasi Selesai -->
+<div id="successOverlay" class="overlay">
+  <div class="overlay-box">
+    <h2>🎉 Good Job!</h2>
+    <p>Tugas berhasil diselesaikan</p>
+    <button onclick="closeOverlay()">OK</button>
+  </div>
+</div>
+
+<audio id="successSound" src="Mission_complete.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
